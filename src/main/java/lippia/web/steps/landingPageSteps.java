@@ -10,11 +10,13 @@ public class landingPageSteps {
     //Get Access to log In From Clockify Home Page
     @Given("^The client is on landing page$")
     public void TheClientIsOnLandingPage() {
+
         landingPageService.navegarWebClockify();
     }
 
     @When("The client click on LogIn button")
     public void ClickLogIn() {
+
         landingPageService.clickLogInButton();
     }
 
