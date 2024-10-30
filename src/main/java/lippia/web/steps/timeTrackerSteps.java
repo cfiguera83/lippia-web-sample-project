@@ -71,6 +71,15 @@ public class timeTrackerSteps {
         timeTrackerService.expandTimeEntries();
     }
 
+    @And("The client click on add description")
+    public void TheClientClickOnAddDescription(){
+        timeTrackerService.clickOnDescription();
+    }
+
+    @And("The client set a description (.*)$")
+    public void theClientSetDescription(String word){
+        timeTrackerService.addDescription(word);
+    }
 
     @And("The client update start clock (.*)$")
     public void theClientUpdateStartTime(String clock) {

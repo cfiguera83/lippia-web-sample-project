@@ -77,6 +77,20 @@ public class timeTrackerService {
         WebActionManager.click(timeTrackerConstants.EXPAND_TIME_ENTRIES);
     }
 
+    //Click on add description
+    public static void clickOnDescription(){
+        WebActionManager.click(timeTrackerConstants.DESCRIPTION);
+    }
+
+    //Add description
+    public static void addDescription(String word){
+        WebElement delete = WebActionManager.getElement(timeTrackerConstants.DESCRIPTION, word);
+        delete.sendKeys(Keys.CONTROL + "a");
+        delete.sendKeys(Keys.DELETE);
+        WebActionManager.setInput(timeTrackerConstants.DESCRIPTION, word);
+    }
+
+
     //Update start clock
     public static void startClockUpdate(String clock){
         waitVisibility(timeTrackerConstants.UPDATE_START_CLOCK);

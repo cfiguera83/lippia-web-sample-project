@@ -1,7 +1,7 @@
 @timeEntry
 Feature: Time entry
 
-  @Smoke @AddTimeEntry @Automated
+  @Smoke @AddTimeEntry @Automated @Do
   Scenario: Add a new time entry successfully
     Given The client is on clockify log in page
     And The client click on 'Log in manually'
@@ -33,8 +33,8 @@ Feature: Time entry
     When The client click on clock
     Then The time entry is not added
 
-  @Smoke @UpdateTimeEntry @Automated @Do
-  Scenario: Update time entry successfully
+  @Smoke @UpdateTimeEntry @Automated
+  Scenario Outline: Update time entry successfully
     Given The client is on clockify log in page
     And The client click on 'Log in manually'
     And The client set the email pruebaacademy@outlook.com
@@ -42,8 +42,15 @@ Feature: Time entry
     And The client click on Login button
     And The client click on Time Tracker button
     When The client click on expand time entries button
-    And The client update start clock 11
-    And The client update finish clock 12
+    And The client click on add description
+    And The client set a description <Description>
+    And The client update start clock <Time1>
+    And The client update finish clock <Time2>
     And The client click on time entry calendar
-    And The client click on date to update the time entry 18
     Then The time entry is successfully updated
+
+    Examples:
+
+      | Description | Time1 | Time2 |
+      | Crowdar     | 11    | 12    |
+      | Crowdar     | 9     | 10    |

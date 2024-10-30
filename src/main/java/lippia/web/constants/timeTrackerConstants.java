@@ -17,7 +17,7 @@ public static final String FINISH_TIME_ENTRY = "xpath://time-tracker-recorder[@c
 //Add start time entry
 public static final String ADD_TIME_TRACKER = "xpath://button[@class='cl-btn cl-btn-primary cl-d-none cl-d-lg-custom-block']";
 
-//Add date
+//Calendar
 public static final String CALENDAR = "xpath://span[@class='pointer cl-non-selectable cl-position-relative cl-z-index-2 ng-star-inserted']//img[@alt='Select date from calendar']";
 
 //Add date
@@ -36,24 +36,18 @@ public static final String PROJECT_CLOCK = "xpath://div[@class='cl-h2 cl-mb-0 cl
 public static final String EXPAND_TIME_ENTRIES = "xpath://span[@class='cl-badge cl-badge-same-entries']";
 
 //Add description
-public static final String DESCRIPTION = "xpath://input[@id='6721401e4a18d82e102e9c49']";
-
-//Add project
-public static final String ADD_PROJECT = "xpath:(//img)[42]";
-
-//Add project 2.0
-public static final String PROJECT = "xpath://button[normalize-space()='Crowdar Academy']";
+public static final String DESCRIPTION = "id:67225d32a75c3e4ef3f46f00";
 
 //Update start clock
-public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[15]";
+public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[11]";
 
 //Update final clock
-public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[16]";
+public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[12]";
 
 //Update time entry calendar
-public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[4]";
+public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[3]";
 
-//Update date
+//Update time entry date
 public static final String UPDATE_DATE = "xpath://body[1]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[5]";
 
 //Time entry updated
