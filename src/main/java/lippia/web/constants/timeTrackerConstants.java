@@ -35,17 +35,26 @@ public static final String PROJECT_CLOCK = "xpath://div[@class='cl-h2 cl-mb-0 cl
 //Expand time entries
 public static final String EXPAND_TIME_ENTRIES = "xpath://span[@class='cl-badge cl-badge-same-entries']";
 
+//Add description
+public static final String DESCRIPTION = "xpath://input[@id='6721401e4a18d82e102e9c49']";
+
+//Add project
+public static final String ADD_PROJECT = "xpath:(//img)[42]";
+
+//Add project 2.0
+public static final String PROJECT = "xpath://button[normalize-space()='Crowdar Academy']";
+
 //Update start clock
-public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[7]";
+public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[15]";
 
 //Update final clock
-public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[8]";
+public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[16]";
 
 //Update time entry calendar
-public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[2]";
+public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[4]";
 
 //Update date
-public static final String UPDATE_DATE = "xpath://td[@class='weekend available'][normalize-space()='20']";
+public static final String UPDATE_DATE = "xpath://body[1]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[5]";
 
 //Time entry updated
 public static final String TIME_ENTRY_UPDATED = "xpath://div[@aria-label='Successfully updated date and time']";

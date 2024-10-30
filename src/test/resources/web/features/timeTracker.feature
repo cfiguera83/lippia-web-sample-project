@@ -45,5 +45,5 @@ Feature: Time entry
     And The client update start clock 11
     And The client update finish clock 12
     And The client click on time entry calendar
-    And The client click on date to update the time entry 20
+    And The client click on date to update the time entry 18
     Then The time entry is successfully updated

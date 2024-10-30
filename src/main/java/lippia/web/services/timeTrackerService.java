@@ -73,11 +73,13 @@ public class timeTrackerService {
 
     //Expand time entries
     public static void expandTimeEntries(){
+        waitVisibility(timeTrackerConstants.EXPAND_TIME_ENTRIES);
         WebActionManager.click(timeTrackerConstants.EXPAND_TIME_ENTRIES);
     }
 
     //Update start clock
     public static void startClockUpdate(String clock){
+        waitVisibility(timeTrackerConstants.UPDATE_START_CLOCK);
         WebElement delete = WebActionManager.getElement(timeTrackerConstants.UPDATE_START_CLOCK, clock);
         delete.sendKeys(Keys.CONTROL + "a");
         delete.sendKeys(Keys.DELETE);
@@ -86,6 +88,7 @@ public class timeTrackerService {
 
     //Update finish clock
     public static void finishClockUpdate(String clock){
+        waitVisibility(timeTrackerConstants.UPDATE_FINAL_CLOCK);
         WebElement delete = WebActionManager.getElement(timeTrackerConstants.UPDATE_FINAL_CLOCK, clock);
         delete.sendKeys(Keys.CONTROL + "a");
         delete.sendKeys(Keys.DELETE);
@@ -94,16 +97,19 @@ public class timeTrackerService {
 
     //Click on time entry calendar
     public static void timeEntryCalendar(){
+        waitVisibility(timeTrackerConstants.UPDATE_CALENDAR);
         WebActionManager.click(timeTrackerConstants.UPDATE_CALENDAR);
     }
 
     //Click on update date
     public static void dateUpdated(){
+        waitVisibility(timeTrackerConstants.UPDATE_DATE);
         WebActionManager.click(timeTrackerConstants.UPDATE_DATE);
     }
 
     //Time entry updated
     public static void timeEntryUpdated(){
+        waitVisibility(timeTrackerConstants.TIME_ENTRY_UPDATED);
         Assert.assertTrue(isVisible(timeTrackerConstants.TIME_ENTRY_UPDATED));
     }
 

@@ -94,7 +94,7 @@ public class timeTrackerSteps {
 
     @Then("The time entry is successfully updated")
     public void theTimeEntryIsSuccessfullyUpdated() {
-
+        timeTrackerService.timeEntryUpdated();
     }
 }
 
