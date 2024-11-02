@@ -23,7 +23,7 @@ Feature: Time entry
       | 10    | 11     |
       | 9     | 10     |
 
-  @cancelTimeEntry @Automated @Do
+  @cancelTimeEntry @Automated
   Scenario: Set a new time entry and cancel
     Given The client is on clockify log in page
     And The client click on 'Log in manually'
