@@ -105,6 +105,42 @@ public class timeTrackerSteps {
     public void theTimeEntryIsSuccessfullyUpdated() {
         timeTrackerService.timeEntryUpdated();
     }
+
+    @When("The client click on clock button")
+    public void theClientClickOnClockButton() {
+        timeTrackerService.clockButton();
+    }
+
+    @And("The client click on Start button")
+    public void theClientClickOnStartButton() {
+        timeTrackerService.startButton();
+    }
+
+    @And("The client click on three point button")
+    public void theClientClickOnThreePointButton() {
+        timeTrackerService.threePointsButton();
+    }
+
+    @And("The client click on discard")
+    public void theClientClickOnDiscard() {
+        timeTrackerService.discardButton();
+    }
+
+    @And("The client click on make sure to discard")
+    public void theClientClickOnMakeSureToDiscard() {
+        timeTrackerService.makeSureDiscard();
+    }
+
+    @Then("The time entry is cancelled")
+    public void theTimeEntryIsCancelled() {
+        timeTrackerService.timeEntryCancelled();
+    }
+
+
+    @And("The client set the project name (.*)$")
+    public void theClientSetTheProjectNamePostman(String name) {
+        timeTrackerService.projectDescription(name);
+    }
 }
 
 

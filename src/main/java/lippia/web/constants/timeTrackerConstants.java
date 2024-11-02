@@ -21,7 +21,7 @@ public static final String ADD_TIME_TRACKER = "xpath://button[@class='cl-btn cl-
 public static final String CALENDAR = "xpath://span[@class='pointer cl-non-selectable cl-position-relative cl-z-index-2 ng-star-inserted']//img[@alt='Select date from calendar']";
 
 //Add date
-public static final String ADD_DATE = "xpath://td[@class='available'][normalize-space()='24']";
+public static final String ADD_DATE = "xpath://td[@class='available'][normalize-space()='1']";
 
 //Time entry added
 public static final String TIME_ENTRY_ADDED = "xpath://div[@aria-label='Time entry has been created']";
@@ -33,10 +33,10 @@ public static final String CLOCK = "xpath://input[@class='cl-form-control cl-inp
 public static final String PROJECT_CLOCK = "xpath://div[@class='cl-h2 cl-mb-0 cl-ml-2 cl-lh-1']";
 
 //Expand time entries
-public static final String EXPAND_TIME_ENTRIES = "xpath://span[@class='cl-badge cl-badge-same-entries']";
+public static final String EXPAND_TIME_ENTRIES = "xpath:(//span[@class='cl-badge cl-badge-same-entries'][normalize-space()='2'])[1]";
 
 //Add description
-public static final String DESCRIPTION = "id:67225d32a75c3e4ef3f46f00";
+public static final String DESCRIPTION = "xpath:(//input[@id='67226448605d557fc57e91c0'])[1]";
 
 //Update start clock
 public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[11]";
@@ -48,9 +48,30 @@ public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[1
 public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[3]";
 
 //Update time entry date
-public static final String UPDATE_DATE = "xpath://body[1]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[5]";
+public static final String UPDATE_DATE = "xpath:(//td[@class='active start-date active end-date available'])[1]";
 
 //Time entry updated
 public static final String TIME_ENTRY_UPDATED = "xpath://div[@aria-label='Successfully updated date and time']";
+
+//Clock button
+public static final String CLOCK_BUTTON ="xpath://img[@alt='Track time using timer selected']";
+
+//Star button
+public static final String START_BUTTON = "xpath://button[@class='cl-btn cl-btn-primary cl-d-none cl-d-lg-custom-block']";
+
+//Three points
+public static final String THREE_POINTS_BUTTON ="xpath:(//img[@class='cl-px-2'])[1]";
+
+//Discard button
+public static final String DISCARD_BUTTON = "xpath://a[normalize-space()='Discard']";
+
+//Make sure discard
+public static final String MAKE_SURE_DISCARD_BUTTON = "xpath:(//button[normalize-space()='Discard'])[1]";
+
+//Discard assert
+public static final String DISCARD_ASSERT = "xpath://div[@aria-label='Timer cancelled']";
+
+//Project description
+public static final String PROJECT_DESCRIPTION = "xpath://input[@class=\"cl-form-control cl-input-timetracker-main cl-cut-text ng-pristine ng-valid ng-touched\"]";
 
 }

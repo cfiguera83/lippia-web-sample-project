@@ -22,6 +22,11 @@ public class timeTrackerService {
         WebActionManager.click(timeTrackerConstants.MANUAL_TIME_ENTRY);
     }
 
+    //Set project description
+    public static void projectDescription(String name){
+        WebActionManager.setInput(timeTrackerConstants.PROJECT_DESCRIPTION, name);
+    }
+
     //Set start time entry
     public static void setStartTimeEntry(String time){
         WebElement delete = WebActionManager.getElement(timeTrackerConstants.START_TIME_ENTRY);
@@ -125,6 +130,40 @@ public class timeTrackerService {
     public static void timeEntryUpdated(){
         waitVisibility(timeTrackerConstants.TIME_ENTRY_UPDATED);
         Assert.assertTrue(isVisible(timeTrackerConstants.TIME_ENTRY_UPDATED));
+    }
+
+    //Click clock
+    public static void clockButton(){
+        WebActionManager.click(timeTrackerConstants.CLOCK_BUTTON);
+    }
+
+    //Start button
+    public static void startButton(){
+        WebActionManager.click(timeTrackerConstants.START_BUTTON);
+    }
+
+    //Three points button
+    public static void threePointsButton(){
+        WebActionManager.click(timeTrackerConstants.THREE_POINTS_BUTTON);
+    }
+
+    //Discard button
+    public static void discardButton(){
+        WebActionManager.click(timeTrackerConstants.DISCARD_BUTTON);
+    }
+
+    //Make sure discard button
+    public static void makeSureDiscard(){
+        waitVisibility(timeTrackerConstants.MAKE_SURE_DISCARD_BUTTON);
+        WebActionManager.waitPresence(timeTrackerConstants.MAKE_SURE_DISCARD_BUTTON);
+        WebActionManager.click(timeTrackerConstants.MAKE_SURE_DISCARD_BUTTON);
+
+    }
+
+    //Time entry cancelled
+    public static void timeEntryCancelled(){
+        waitVisibility(timeTrackerConstants.DISCARD_ASSERT);
+        Assert.assertTrue(isVisible(timeTrackerConstants.DISCARD_ASSERT));
     }
 
 }
