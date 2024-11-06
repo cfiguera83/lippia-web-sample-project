@@ -1,6 +1,6 @@
 package lippia.web.constants;
 
-public class timeTrackerConstants {
+public class TimeTrackerConstants {
 
 //Time tracker button
 public static final String TIME_TRACKER_BUTTON = "xpath:(//span[contains(text(),'TIME TRACKER')])[1]";

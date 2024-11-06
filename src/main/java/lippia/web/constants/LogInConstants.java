@@ -1,6 +1,6 @@
 package lippia.web.constants;
 
-public class logInConstants {
+public class LogInConstants {
 
 
     //Manually Log In
@@ -9,7 +9,7 @@ public class logInConstants {
     public static final String ENTER_PASSWORD = "xpath://input[@id='password']";
     public static final String LOG_IN = "xpath://button[normalize-space()='Log In']";
 
-    //Inavlid email message
+    //Invalid email message
     public static final String INVALID_EMAIL = "xpath:(//span[@class='cl-invalid-feedback cl-block cl-mt-0 ng-tns-c134-2 ng-star-inserted'])[1]";
 
     //Click password

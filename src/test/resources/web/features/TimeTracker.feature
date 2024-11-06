@@ -1,13 +1,15 @@
-@timeEntry
+@TimeEntry
 Feature: Time entry
 
-  @Smoke @addTimeEntry @Automated
-  Scenario Outline: Add a new time entry successfully
+  Background:
     Given The client is on clockify log in page
     And The client click on 'Log in manually'
     And The client set the email pruebaacademy@outlook.com
     And The client set the password prueba1234
     And The client click on Login button
+
+  @Smoke @AddTimeEntry @Automated
+  Scenario Outline: Add a new time entry successfully
     When The client click on Time Tracker button
     And The client click on manual time entry
     And The client set the project name Postman
@@ -20,33 +22,23 @@ Feature: Time entry
 
     Examples:
       | Start | Finish |
-      | 10    | 11     |
+      | 9     | 11     |
       | 9     | 10     |
 
-  @cancelTimeEntry @Automated
+  @CancelTimeEntry @Automated @Do
   Scenario: Set a new time entry and cancel
-    Given The client is on clockify log in page
-    And The client click on 'Log in manually'
-    And The client set the email pruebaacademy@outlook.com
-    And The client set the password prueba1234
-    And The client click on Login button
-    And The client click on Time Tracker button
-    When The client click on clock button
+    When The client click on Time Tracker button
+    And The client click on clock button
     And The client click on Start button
     And The client click on three point button
     And The client click on discard
     And The client click on make sure to discard
     Then The time entry is cancelled
 
-  @updateTimeEntry @Automated
+  @UpdateTimeEntry @Automated
   Scenario Outline: Update time entry successfully
-    Given The client is on clockify log in page
-    And The client click on 'Log in manually'
-    And The client set the email pruebaacademy@outlook.com
-    And The client set the password prueba1234
-    And The client click on Login button
-    And The client click on Time Tracker button
-    When The client click on expand time entries button
+    When The client click on Time Tracker button
+    And The client click on expand time entries button
     And The client click on add description
     And The client set a description Crowdar
     And The client update start clock <Start Time>

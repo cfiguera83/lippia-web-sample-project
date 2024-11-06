@@ -5,28 +5,27 @@ import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
 import junit.framework.Assert;
 import lippia.web.constants.LandingPageConstants;
-import lippia.web.constants.logInConstants;
 
 import static com.crowdar.core.actions.WebActionManager.click;
 import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
-public class landingPageService extends ActionManager {
+public class LandingPageService extends ActionManager {
 
     //1. Test case: LogIn
 
     //Precondition
-    public static void navegarWebClockify(){
+    public static void NavegarWebClockify(){
         navigateTo(PropertyManager.getProperty("web.base.url"));
     }
 
     //Click Log In
-    public static void clickLogInButton() {
+    public static void ClickLogInButton() {
         Object landingPageConstants;
         WebActionManager.click(LandingPageConstants.LOG_IN_BUTTON);
     }
 
     //Log in page
-    public static void landingPage(){
+    public static void LandingPage(){
         navigateTo("https://app.clockify.me/en/login");
     }
 
