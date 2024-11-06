@@ -36,16 +36,16 @@ public static final String PROJECT_CLOCK = "xpath://div[@class='cl-h2 cl-mb-0 cl
 public static final String EXPAND_TIME_ENTRIES = "xpath:(//span[@class='cl-badge cl-badge-same-entries'][normalize-space()='2'])[1]";
 
 //Add description
-public static final String DESCRIPTION = "xpath:(//input[@id='67226448605d557fc57e91c0'])[1]";
+public static final String DESCRIPTION = "xpath:(//input[@id='672baa60e1048109844dc041'])[1]";
 
 //Update start clock
-public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[11]";
+public static final String UPDATE_START_CLOCK = "xpath:(//input[@type='text'])[15]";
 
 //Update final clock
-public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[12]";
+public static final String UPDATE_FINAL_CLOCK = "xpath:(//input[@type='text'])[16]";
 
 //Update time entry calendar
-public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[3]";
+public static final String UPDATE_CALENDAR = "xpath:(//img[@alt='Select date from calendar'])[4]";
 
 //Update time entry date
 public static final String UPDATE_DATE = "xpath:(//td[@class='active start-date active end-date available'])[1]";
@@ -72,6 +72,6 @@ public static final String MAKE_SURE_DISCARD_BUTTON = "xpath:(//button[normalize
 public static final String DISCARD_ASSERT = "xpath://div[@aria-label='Timer cancelled']";
 
 //Project description
-public static final String PROJECT_DESCRIPTION = "xpath://input[@class=\"cl-form-control cl-input-timetracker-main cl-cut-text ng-pristine ng-valid ng-touched\"]";
+public static final String PROJECT_DESCRIPTION = "xpath://input[@class=cl-form-control cl-input-timetracker-main cl-cut-text ng-pristine ng-valid ng-touched]";
 
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import static com.crowdar.core.actions.ActionManager.isVisible;
 import static com.crowdar.core.actions.ActionManager.waitVisibility;
+import static org.bouncycastle.oer.its.etsi102941.CtlCommand.delete;
 
 public class TimeTrackerService {
 
@@ -29,17 +30,17 @@ public class TimeTrackerService {
 
     //Set start time entry
     public static void SetStartTimeEntry(String time){
-        WebElement delete = WebActionManager.getElement(TimeTrackerConstants.START_TIME_ENTRY);
-        delete.sendKeys(Keys.CONTROL + "a");
-        delete.sendKeys(Keys.DELETE);
+        WebElement DeleteStartTimeEntry = WebActionManager.getElement(TimeTrackerConstants.START_TIME_ENTRY);
+        DeleteStartTimeEntry.sendKeys(Keys.CONTROL + "a");
+        DeleteStartTimeEntry.sendKeys(Keys.DELETE);
         WebActionManager.setInput(TimeTrackerConstants.START_TIME_ENTRY, time);
     }
 
     //Set finish time entry
     public static void SetFinishTimeEntry(String time){
-        WebElement delete = WebActionManager.getElement(TimeTrackerConstants.FINISH_TIME_ENTRY);
-        delete.sendKeys(Keys.CONTROL + "a");
-        delete.sendKeys(Keys.DELETE);
+        WebElement DeleteFinishTimeEntry = WebActionManager.getElement(TimeTrackerConstants.FINISH_TIME_ENTRY);
+        DeleteFinishTimeEntry.sendKeys(Keys.CONTROL + "a");
+        DeleteFinishTimeEntry.sendKeys(Keys.DELETE);
         WebActionManager.setInput(TimeTrackerConstants.FINISH_TIME_ENTRY, time);
     }
 
@@ -89,9 +90,9 @@ public class TimeTrackerService {
 
     //Add description
     public static void AddDescription(String word){
-        WebElement delete = WebActionManager.getElement(TimeTrackerConstants.DESCRIPTION, word);
-        delete.sendKeys(Keys.CONTROL + "a");
-        delete.sendKeys(Keys.DELETE);
+        WebElement DeleteDescription = WebActionManager.getElement(TimeTrackerConstants.DESCRIPTION, word);
+        DeleteDescription.sendKeys(Keys.CONTROL + "a");
+        DeleteDescription.sendKeys(Keys.DELETE);
         WebActionManager.setInput(TimeTrackerConstants.DESCRIPTION, word);
     }
 
@@ -99,18 +100,18 @@ public class TimeTrackerService {
     //Update start clock
     public static void StartClockUpdate(String clock){
         waitVisibility(TimeTrackerConstants.UPDATE_START_CLOCK);
-        WebElement delete = WebActionManager.getElement(TimeTrackerConstants.UPDATE_START_CLOCK, clock);
-        delete.sendKeys(Keys.CONTROL + "a");
-        delete.sendKeys(Keys.DELETE);
+        WebElement DeleteStartClock = WebActionManager.getElement(TimeTrackerConstants.UPDATE_START_CLOCK, clock);
+        DeleteStartClock.sendKeys(Keys.CONTROL + "a");
+        DeleteStartClock.sendKeys(Keys.DELETE);
         WebActionManager.setInput(TimeTrackerConstants.UPDATE_START_CLOCK, clock);
     }
 
     //Update finish clock
     public static void FinishClockUpdate(String clock){
         waitVisibility(TimeTrackerConstants.UPDATE_FINAL_CLOCK);
-        WebElement delete = WebActionManager.getElement(TimeTrackerConstants.UPDATE_FINAL_CLOCK, clock);
-        delete.sendKeys(Keys.CONTROL + "a");
-        delete.sendKeys(Keys.DELETE);
+        WebElement DeleteFinishClock = WebActionManager.getElement(TimeTrackerConstants.UPDATE_FINAL_CLOCK, clock);
+        DeleteFinishClock.sendKeys(Keys.CONTROL + "a");
+        DeleteFinishClock.sendKeys(Keys.DELETE);
         WebActionManager.setInput(TimeTrackerConstants.UPDATE_FINAL_CLOCK, clock);
     }
 

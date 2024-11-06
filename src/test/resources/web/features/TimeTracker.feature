@@ -25,7 +25,7 @@ Feature: Time entry
       | 9     | 11     |
       | 9     | 10     |
 
-  @CancelTimeEntry @Automated @Do
+  @CancelTimeEntry @Automated
   Scenario: Set a new time entry and cancel
     When The client click on Time Tracker button
     And The client click on clock button
@@ -35,7 +35,7 @@ Feature: Time entry
     And The client click on make sure to discard
     Then The time entry is cancelled
 
-  @UpdateTimeEntry @Automated
+  @UpdateTimeEntry @Automated @Do
   Scenario Outline: Update time entry successfully
     When The client click on Time Tracker button
     And The client click on expand time entries button
